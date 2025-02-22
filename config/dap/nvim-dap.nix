@@ -21,7 +21,6 @@
             texthl = "DapLogPoint";
           };
         };
-
         configurations = {
           java = [
             {
@@ -34,7 +33,6 @@
           ];
         };
       };
-      extensions = {
         dap-python = {
           enable = true;
         };
@@ -51,7 +49,6 @@
           enable = true;
         };
       };
-    };
 
     keymaps = [
       {
