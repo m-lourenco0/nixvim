@@ -65,7 +65,7 @@
     #       silent = true;
     #       desc = "Git explorer";
     #     };
-    #   }
+      # }
     # ];
   };
 }
