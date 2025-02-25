@@ -6,13 +6,11 @@
   config = lib.mkIf config.notify.enable {
     plugins.notify = {
       enable = true;
-      settings = {
-        top_down = true;
-        fps = 60;
-        render = "default";
-        background_colour = "#000000";
-        timeout = 500;
-      };
+      backgroundColour = "#000000";
+      fps = 60;
+      render = "default";
+      timeout = 500;
+      topDown = true;
     };
     keymaps = [
       {
