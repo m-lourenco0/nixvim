@@ -54,7 +54,7 @@
     keymaps = [
       {
         mode = "n";
-        key = "<leader>e";
+        key = "<leader>sb";
         action = ":SidebarNvimToggle<CR>";
         options = {
           desc = "Toggle Explorer";
