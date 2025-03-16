@@ -93,18 +93,18 @@
 
           rust_analyzer = {
             enable = true;
-            installCargo = true; # Optional: can be false if you're confident in your flake
-            installRustc = true; # Optional: can be false if you're confident in your flake
+            installCargo = false; # Optional: can be false if you're confident in your flake
+            installRustc = false; # Optional: can be false if you're confident in your flake
             settings = {
               checkOnSave = true;
               check = {
                 command = "clippy";
               };
-              completion = {
-                autoimport = {
-                  enable = true; # Automatically add imports for unresolved items
-                };
-              };
+              # completion = {
+              #   autoimport = {
+              #     enable = true; # Automatically add imports for unresolved items
+              #   };
+              # };
               procMacro = {
                 enable = true;
               };
