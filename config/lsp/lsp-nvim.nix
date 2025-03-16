@@ -93,19 +93,40 @@
 
           rust_analyzer = {
             enable = true;
-            installCargo = true;
-            installRustc = true;
+            installCargo = true; # Optional: can be false if you're confident in your flake
+            installRustc = true; # Optional: can be false if you're confident in your flake
             settings = {
               checkOnSave = true;
               check = {
                 command = "clippy";
+                allTargets = true; # Run clippy for all targets (e.g., tests, examples)
               };
-              # inlayHints = {
-              #   enable = true;
-              #   showParameterNames = true;
-              #   parameterHintsPrefix = "<- ";
-              #   otherHintsPrefix = "=> ";
-              # };
+              cargo = {
+                target = "x86_64-unknown-linux-gnu"; # Ensure the target matches your system
+                extraEnv = {
+                  RUSTC_VERSION = "1.85.0"; # Match the RUSTC_VERSION from your flake
+                };
+              };
+              rust = {
+                edition = "2024"; # Explicitly tell rust-analyzer to use the 2024 edition
+              };
+              inlayHints = {
+                enable = true;
+                showParameterNames = true;
+                parameterHintsPrefix = "<- ";
+                otherHintsPrefix = "=> ";
+                typeHints = true;
+                chainingHints = true;
+              };
+              diagnostics = {
+                enable = true;
+                experimental = true; # Enable experimental diagnostics (e.g., for proc macros)
+              };
+              completion = {
+                autoimport = {
+                  enable = true; # Automatically add imports for unresolved items
+                };
+              };
               procMacro = {
                 enable = true;
               };
