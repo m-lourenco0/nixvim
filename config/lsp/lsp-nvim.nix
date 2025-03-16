@@ -104,23 +104,22 @@
               cargo = {
                 target = "x86_64-unknown-linux-gnu"; # Ensure the target matches your system
                 extraEnv = {
-                  RUSTC_VERSION = "1.85.0"; # Match the RUSTC_VERSION from your flake
+                  RUSTC_VERSION = "stable"; # Match the RUSTC_VERSION from your flake
                 };
               };
               rust = {
                 edition = "2024"; # Explicitly tell rust-analyzer to use the 2024 edition
               };
-              inlayHints = {
-                enable = true;
-                showParameterNames = true;
-                parameterHintsPrefix = "<- ";
-                otherHintsPrefix = "=> ";
-                typeHints = true;
-                chainingHints = true;
-              };
+              # inlayHints = {
+              #   enable = true;
+              #   showParameterNames = true;
+              #   parameterHintsPrefix = "<- ";
+              #   otherHintsPrefix = "=> ";
+              #   typeHints = true;
+                # chainingHints = true;
+              # };
               diagnostics = {
                 enable = true;
-                experimental = true; # Enable experimental diagnostics (e.g., for proc macros)
               };
               completion = {
                 autoimport = {
