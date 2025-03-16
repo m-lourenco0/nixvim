@@ -99,27 +99,6 @@
               checkOnSave = true;
               check = {
                 command = "clippy";
-                allTargets = true; # Run clippy for all targets (e.g., tests, examples)
-              };
-              # cargo = {
-              #   target = "x86_64-unknown-linux-gnu"; # Ensure the target matches your system
-              #   extraEnv = {
-              #     RUSTC_VERSION = "stable"; # Match the RUSTC_VERSION from your flake
-              #   };
-              # };
-              # rust = {
-              #   edition = "2024"; # Explicitly tell rust-analyzer to use the 2024 edition
-              # };
-              inlayHints = {
-                enable = true;
-                showParameterNames = true;
-                parameterHintsPrefix = "<- ";
-                otherHintsPrefix = "=> ";
-                # typeHints = true;
-                # chainingHints = true;
-              };
-              diagnostics = {
-                enable = true;
               };
               completion = {
                 autoimport = {
