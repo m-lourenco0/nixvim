@@ -8,7 +8,7 @@
       dap-virtual-text.enable = true;
       dap-ui = {
         enable = true;
-        floating.mappings = {
+        settings.floating.mappings = {
           close = [
             "<ESC>"
             "q"
